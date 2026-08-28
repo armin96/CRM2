@@ -1,6 +1,8 @@
 # ⚡ MiniCRM — Sales Pipeline & Outreach Manager
 
-[![CI](https://github.com/armin/miniCRM/actions/workflows/ci.yml/badge.svg)](https://github.com/armin/miniCRM/actions)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://crm-mini-git-main-blackde605-1542.vercel.app/)
+
+[![CI](https://github.com/armin96/CRM2/actions/workflows/ci.yml/badge.svg)](https://github.com/armin96/CRM2/actions)
 [![Java](https://img.shields.io/badge/Java-21-ED8B00?logo=openjdk&logoColor=white)](https://openjdk.org/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
 [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev/)
@@ -8,6 +10,9 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+
+> 🚀 **Live Interactive Demo:** [https://crm-mini-git-main-blackde605-1542.vercel.app](https://crm-mini-git-main-blackde605-1542.vercel.app/)  
+> *(Pre-configured demo account: `demo@minicrm.io` / `demo1234`)*
 
 A modern, production-grade **Sales Pipeline Management & CRM platform** engineered with **Spring Boot 4**, **PostgreSQL**, and **React 18 + TypeScript**. 
 
