@@ -1,6 +1,18 @@
+<div align="center">
+
 # ⚡ MiniCRM — Sales Pipeline & Outreach Manager
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://crm-mini-git-main-blackde605-1542.vercel.app/)
+**A modern, production-grade Sales Pipeline & CRM Manager built with Spring Boot 4, PostgreSQL, React 18, and TypeScript.**
+
+[![Live Demo](https://img.shields.io/badge/🚀_LIVE_DEMO-OPEN_IN_BROWSER-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://crm-mini-git-main-blackde605-1542.vercel.app/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/armin96/CRM2)
+
+<br/>
+
+### 🌐 [👉 Click Here to Open Live Demo (Vercel) 👈](https://crm-mini-git-main-blackde605-1542.vercel.app/)
+*(Demo login is pre-filled: `demo@minicrm.io` / `demo1234` — just click **Sign in**)*
+
+<br/>
 
 [![CI](https://github.com/armin96/CRM2/actions/workflows/ci.yml/badge.svg)](https://github.com/armin96/CRM2/actions)
 [![Java](https://img.shields.io/badge/Java-21-ED8B00?logo=openjdk&logoColor=white)](https://openjdk.org/)
@@ -11,12 +23,20 @@
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-> 🚀 **Live Interactive Demo:** [https://crm-mini-git-main-blackde605-1542.vercel.app](https://crm-mini-git-main-blackde605-1542.vercel.app/)  
-> *(Pre-configured demo account: `demo@minicrm.io` / `demo1234`)*
+</div>
 
-A modern, production-grade **Sales Pipeline Management & CRM platform** engineered with **Spring Boot 4**, **PostgreSQL**, and **React 18 + TypeScript**. 
+---
 
-Designed to solve real-world sales operations challenges — managing 600+ contacts, tracking deal momentum across a 6-stage Kanban board, logging cold email outreach sequences, and delivering real-time revenue analytics with a minimalist SaaS design.
+## 📸 Screenshots & Visual Overview
+
+### 1. Analytics Dashboard (Real-time KPIs & Conversion Funnels)
+![Analytics Dashboard](docs/screenshots/dashboard.png)
+
+### 2. 6-Stage Drag-and-Drop Pipeline (Kanban Board with @dnd-kit)
+![Pipeline Kanban Board](docs/screenshots/pipeline.png)
+
+### 3. Contact & Outreach Management (Multi-field Search & Pagination)
+![Contacts Management](docs/screenshots/contacts.png)
 
 ---
 
@@ -60,7 +80,7 @@ miniCRM/
 │
 ├── frontend/                 # React 18 + TypeScript SPA (Vite)
 │   ├── src/
-│   │   ├── api/              # Axios Client with Auto-JWT Attachment & Error Handling
+│   │   ├── api/              # Axios Client with Auto-JWT Attachment & Demo Fallback
 │   │   ├── components/       # AppLayout, Sidebar, Modal Dialogs, Route Guards
 │   │   ├── pages/            # Dashboard, Contacts, Pipeline, Emails, Auth
 │   │   ├── store/            # Zustand Client & Auth Store (with LocalStorage Sync)
@@ -70,6 +90,7 @@ miniCRM/
 │   ├── vite.config.ts        # Vite + Tailwind + Test config
 │   └── Dockerfile            # Multi-stage Nginx Production Image
 │
+├── docs/screenshots/         # Application visual previews
 ├── .github/workflows/        # CI/CD: Automated Maven & NPM Test Pipeline
 └── docker-compose.yml        # One-command full-stack container orchestration
 ```
@@ -154,8 +175,8 @@ npm test
 
 Clone the repository and run all services (Postgres, Backend, Frontend) with a single command:
 ```bash
-git clone https://github.com/armin/miniCRM.git
-cd miniCRM
+git clone https://github.com/armin96/CRM2.git
+cd CRM2
 docker-compose up --build
 ```
 - **Frontend App**: `http://localhost:3000`
@@ -221,12 +242,3 @@ DB_USERNAME=<db_user>
 DB_PASSWORD=<db_password>
 JWT_SECRET=<your-64-character-random-hex-string>
 ```
-
----
-
-## 🏷️ Suggested GitHub Repository Metadata
-
-- **Repository Description**:
-  > ⚡ Modern Full-Stack Sales Pipeline & CRM Manager built with Spring Boot 4, PostgreSQL, React 18, TypeScript, and Tailwind CSS. Features JWT Auth, Drag-and-Drop Kanban, Email Sequence Tracking, and Real-Time Analytics Dashboard.
-- **Topics / Tags**:
-  `spring-boot` `react` `typescript` `postgresql` `crm` `sales-pipeline` `kanban` `jwt-authentication` `tailwindcss` `testcontainers` `dnd-kit` `fullstack`
