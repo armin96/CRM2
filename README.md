@@ -248,7 +248,6 @@ JWT_SECRET=<your-64-character-random-hex-string>
 ## 👨‍💻 Author & Creator
 
 **Armin** ([@armin96](https://github.com/armin96))
-- **Email:** [devaafy@gmail.com](mailto:devaafy@gmail.com)
 - **GitHub:** [github.com/armin96](https://github.com/armin96)
 
 ---
