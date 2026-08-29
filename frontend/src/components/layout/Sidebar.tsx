@@ -95,10 +95,7 @@ export function Sidebar() {
           }}>
             A
           </div>
-          <div>
-            <div style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', lineHeight: 1.2 }}>Armin</div>
-            <div style={{ fontSize: 10, color: '#64748b' }}>Full-Stack Engineer</div>
-          </div>
+          <div style={{ fontSize: 13, fontWeight: 700, color: '#0f172a' }}>Armin</div>
         </div>
       </div>
 
