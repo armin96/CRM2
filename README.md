@@ -5,7 +5,7 @@
 **A modern, production-grade Sales Pipeline & CRM Manager built with Spring Boot, PostgreSQL, React 18, and TypeScript.**
 
 [![Live Demo](https://img.shields.io/badge/🚀_LIVE_DEMO-OPEN_IN_BROWSER-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://crm-mini-git-main-blackde605-1542.vercel.app/)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/armin96/CRM2)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/armin96/Nexora-CRM)
 
 <br/>
 
@@ -14,7 +14,7 @@
 
 <br/>
 
-[![CI](https://github.com/armin96/CRM2/actions/workflows/ci.yml/badge.svg)](https://github.com/armin96/CRM2/actions)
+[![CI](https://github.com/armin96/Nexora-CRM/actions/workflows/ci.yml/badge.svg)](https://github.com/armin96/Nexora-CRM/actions)
 [![Java](https://img.shields.io/badge/Java-21-ED8B00?logo=openjdk&logoColor=white)](https://openjdk.org/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
 [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev/)
@@ -175,8 +175,8 @@ npm test
 
 Clone the repository and run all services (Postgres, Backend, Frontend) with a single command:
 ```bash
-git clone https://github.com/armin96/CRM2.git
-cd CRM2
+git clone https://github.com/armin96/Nexora-CRM.git
+cd Nexora-CRM
 docker-compose up --build
 ```
 - **Frontend App**: `http://localhost:3000`
