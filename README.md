@@ -1,8 +1,8 @@
 <div align="center">
 
-# ⚡ MiniCRM — Sales Pipeline & Outreach Manager
+# ⚡ Nexora CRM — Sales Pipeline & Outreach Manager
 
-**A modern, production-grade Sales Pipeline & CRM Manager built with Spring Boot 4, PostgreSQL, React 18, and TypeScript.**
+**A modern, production-grade Sales Pipeline & CRM Manager built with Spring Boot, PostgreSQL, React 18, and TypeScript.**
 
 [![Live Demo](https://img.shields.io/badge/🚀_LIVE_DEMO-OPEN_IN_BROWSER-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://crm-mini-git-main-blackde605-1542.vercel.app/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/armin96/CRM2)
@@ -242,3 +242,18 @@ DB_USERNAME=<db_user>
 DB_PASSWORD=<db_password>
 JWT_SECRET=<your-64-character-random-hex-string>
 ```
+
+---
+
+## 👨‍💻 Author & Creator
+
+**Armin** ([@armin96](https://github.com/armin96))
+- **Email:** [devaafy@gmail.com](mailto:devaafy@gmail.com)
+- **GitHub:** [github.com/armin96](https://github.com/armin96)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
