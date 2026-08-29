@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Zap, Mail, Lock, Eye, EyeOff } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
 import { authApi } from '../../api/endpoints';
 import { useAuthStore } from '../../store/authStore';
+import { BrandLogo } from '../../components/ui/BrandLogo';
 
 export function LoginPage() {
   const navigate = useNavigate();
@@ -34,18 +35,11 @@ export function LoginPage() {
     }}>
       <div style={{ width: '100%', maxWidth: 400 }}>
         {/* Logo */}
-        <div style={{ textAlign: 'center', marginBottom: 32 }}>
-          <div style={{
-            width: 52, height: 52, borderRadius: 14,
-            background: 'linear-gradient(135deg, #2563eb, #4f46e5)',
-            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-            boxShadow: '0 4px 14px rgba(37,99,235,0.3)', marginBottom: 14,
-          }}>
-            <Zap size={26} color="#fff" />
-          </div>
-          <h1 style={{ fontSize: 24, fontWeight: 800, letterSpacing: '-0.5px', color: '#0f172a' }}>Welcome back</h1>
-          <p style={{ color: '#64748b', fontSize: 14, marginTop: 6 }}>
-            Sign in to your MiniCRM account
+        <div style={{ textAlign: 'center', marginBottom: 28, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <BrandLogo size="xl" />
+          <h1 style={{ fontSize: 22, fontWeight: 800, letterSpacing: '-0.5px', color: '#0f172a', marginTop: 16 }}>Welcome back</h1>
+          <p style={{ color: '#64748b', fontSize: 14, marginTop: 4 }}>
+            Sign in to access your sales workspace
           </p>
         </div>
 
@@ -105,12 +99,26 @@ export function LoginPage() {
           </form>
         </div>
 
-        <p style={{ textAlign: 'center', fontSize: 14, color: '#64748b', marginTop: 20 }}>
+        <p style={{ textAlign: 'center', fontSize: 14, color: '#64748b', marginTop: 16 }}>
           Don't have an account?{' '}
           <Link to="/register" style={{ color: '#2563eb', fontWeight: 600, textDecoration: 'none' }}>
             Create one
           </Link>
         </p>
+
+        {/* Creator Footer */}
+        <div style={{ textAlign: 'center', marginTop: 24, fontSize: 12, color: '#94a3b8', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6 }}>
+          <span>Developed with precision by</span>
+          <span style={{
+            fontWeight: 700,
+            color: '#475569',
+            background: '#e2e8f0',
+            padding: '2px 8px',
+            borderRadius: 12,
+          }}>
+            Armin
+          </span>
+        </div>
       </div>
     </div>
   );

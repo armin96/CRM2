@@ -1,9 +1,10 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import {
   LayoutDashboard, Users, Kanban, Mail,
-  LogOut, Zap
+  LogOut, Code2
 } from 'lucide-react';
 import { useAuthStore } from '../../store/authStore';
+import { BrandLogo } from '../ui/BrandLogo';
 
 const NAV_ITEMS = [
   { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
@@ -23,7 +24,7 @@ export function Sidebar() {
 
   return (
     <aside style={{
-      width: '230px', flexShrink: 0,
+      width: '240px', flexShrink: 0,
       background: '#ffffff',
       borderRight: '1px solid #e2e8f0',
       display: 'flex', flexDirection: 'column',
@@ -31,22 +32,10 @@ export function Sidebar() {
     }}>
       {/* Logo */}
       <div style={{
-        padding: '22px 20px 18px',
+        padding: '20px 18px 16px',
         borderBottom: '1px solid #e2e8f0',
-        display: 'flex', alignItems: 'center', gap: '10px',
       }}>
-        <div style={{
-          width: 32, height: 32, borderRadius: 8,
-          background: 'linear-gradient(135deg, #2563eb, #4f46e5)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          boxShadow: '0 2px 6px rgba(37,99,235,0.25)',
-        }}>
-          <Zap size={16} color="#fff" />
-        </div>
-        <div>
-          <div style={{ fontSize: 15, fontWeight: 700, letterSpacing: '-0.3px', color: '#0f172a' }}>MiniCRM</div>
-          <div style={{ fontSize: 10, color: '#94a3b8', fontWeight: 600, letterSpacing: '0.5px' }}>SALES PIPELINE</div>
-        </div>
+        <BrandLogo size="md" />
       </div>
 
       {/* Nav */}
@@ -72,14 +61,55 @@ export function Sidebar() {
         ))}
       </nav>
 
+      {/* Creator & Developer Section */}
+      <div style={{
+        margin: '0 12px 10px',
+        padding: '10px 12px',
+        background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)',
+        border: '1px solid #e2e8f0',
+        borderRadius: 10,
+        boxShadow: '0 1px 2px rgba(0,0,0,0.02)',
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 4 }}>
+          <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.5px', color: '#64748b', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: 4 }}>
+            <Code2 size={12} color="#4f46e5" /> Creator & Developer
+          </span>
+          <span style={{
+            fontSize: 9,
+            fontWeight: 700,
+            background: 'linear-gradient(135deg, #4f46e5, #2563eb)',
+            color: '#fff',
+            padding: '1px 6px',
+            borderRadius: 10,
+          }}>
+            Lead
+          </span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 4 }}>
+          <div style={{
+            width: 26, height: 26, borderRadius: '50%',
+            background: 'linear-gradient(135deg, #4f46e5, #06b6d4)',
+            color: '#fff', fontSize: 12, fontWeight: 800,
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            boxShadow: '0 2px 5px rgba(79,70,229,0.3)',
+          }}>
+            A
+          </div>
+          <div>
+            <div style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', lineHeight: 1.2 }}>Armin</div>
+            <div style={{ fontSize: 10, color: '#64748b' }}>Full-Stack Engineer</div>
+          </div>
+        </div>
+      </div>
+
       {/* User + Logout */}
-      <div style={{ padding: '14px 12px', borderTop: '1px solid #e2e8f0', background: '#fafafa' }}>
+      <div style={{ padding: '12px 12px 14px', borderTop: '1px solid #e2e8f0', background: '#fafafa' }}>
         <div style={{
           background: '#ffffff', border: '1px solid #e2e8f0',
-          borderRadius: 8, padding: '10px 12px', marginBottom: 8,
+          borderRadius: 8, padding: '8px 10px', marginBottom: 8,
           boxShadow: '0 1px 2px 0 rgba(0,0,0,0.03)',
         }}>
-          <div style={{ fontSize: 13, fontWeight: 600, color: '#0f172a', marginBottom: 2 }}>
+          <div style={{ fontSize: 12, fontWeight: 600, color: '#0f172a', marginBottom: 1 }}>
             {user?.fullName || 'User'}
           </div>
           <div style={{ fontSize: 11, color: '#64748b', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
@@ -89,9 +119,9 @@ export function Sidebar() {
         <button
           onClick={handleLogout}
           className="btn btn-secondary w-full"
-          style={{ justifyContent: 'center', fontSize: 13 }}
+          style={{ justifyContent: 'center', fontSize: 12, padding: '6px 12px' }}
         >
-          <LogOut size={14} />
+          <LogOut size={13} />
           Sign out
         </button>
       </div>

@@ -18,7 +18,9 @@ describe('Sidebar Component', () => {
       </BrowserRouter>
     );
 
-    expect(screen.getByText('MiniCRM')).toBeInTheDocument();
+    expect(screen.getByText('Nexora')).toBeInTheDocument();
+    expect(screen.getByText('CRM')).toBeInTheDocument();
+    expect(screen.getByText('Armin')).toBeInTheDocument();
     expect(screen.getByText('Dashboard')).toBeInTheDocument();
     expect(screen.getByText('Contacts')).toBeInTheDocument();
     expect(screen.getByText('Pipeline')).toBeInTheDocument();
