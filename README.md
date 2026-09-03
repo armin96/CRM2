@@ -4,13 +4,14 @@
 
 **A modern, production-grade Sales Pipeline & CRM Manager built with Spring Boot, PostgreSQL, React 18, and TypeScript.**
 
-[![Live Demo](https://img.shields.io/badge/🚀_LIVE_DEMO-OPEN_IN_BROWSER-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://crm-mini-git-main-blackde605-1542.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/🚀_LIVE_DEMO-OPEN_IN_BROWSER-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](https://nexoracrm.sparkhubs.ir)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/armin96/Nexora-CRM)
 
 <br/>
 
-### 🌐 [👉 Click Here to Open Live Demo (Vercel) 👈](https://crm-mini-git-main-blackde605-1542.vercel.app/)
+### 🌐 [👉 Click Here to Open Live Demo (nexoracrm.sparkhubs.ir) 👈](https://nexoracrm.sparkhubs.ir)
 *(Demo login is pre-filled: `demo@minicrm.io` / `demo1234` — just click **Sign in**)*
+
 
 <br/>
 

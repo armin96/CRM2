@@ -1,5 +1,3 @@
-version: '3.9'
-
 services:
   postgres:
     image: postgres:16-alpine
@@ -7,9 +5,7 @@ services:
     environment:
       POSTGRES_DB: minicrm
       POSTGRES_USER: minicrm
-      POSTGRES_PASSWORD: minicrm
-    ports:
-      - "5432:5432"
+      POSTGRES_PASSWORD: minicrm_secure_password_nexora
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
@@ -17,6 +13,7 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+    restart: unless-stopped
 
   backend:
     build:
@@ -29,10 +26,10 @@ services:
     environment:
       DB_URL: jdbc:postgresql://postgres:5432/minicrm
       DB_USERNAME: minicrm
-      DB_PASSWORD: minicrm
-      JWT_SECRET: change-this-in-production-use-a-long-random-secret-key
-    ports:
-      - "8080:8080"
+      DB_PASSWORD: minicrm_secure_password_nexora
+      JWT_SECRET: nexora-crm-production-jwt-secret-key-minimum-256-bits-length-guaranteed
+      JAVA_OPTS: "-Xmx256m -Xms128m"
+    restart: unless-stopped
 
   frontend:
     build:
@@ -42,7 +39,8 @@ services:
     depends_on:
       - backend
     ports:
-      - "3000:80"
+      - "127.0.0.1:3001:80"
+    restart: unless-stopped
 
 volumes:
   pgdata:
