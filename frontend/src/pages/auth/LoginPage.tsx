@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff, TrendingUp, CheckCircle2, Zap, ShieldCheck } from 'lucide-react';
 import { authApi } from '../../api/endpoints';
 import { useAuthStore } from '../../store/authStore';
 import { BrandLogo } from '../../components/ui/BrandLogo';
+import loginIllustration from '../../assets/login-illustration.jpg';
 
 export function LoginPage() {
   const navigate = useNavigate();
@@ -29,95 +30,136 @@ export function LoginPage() {
   };
 
   return (
-    <div style={{
-      minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
-      background: '#f8fafc', padding: 16,
-    }}>
-      <div style={{ width: '100%', maxWidth: 400 }}>
-        {/* Logo */}
-        <div style={{ textAlign: 'center', marginBottom: 28, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <BrandLogo size="xl" />
-          <h1 style={{ fontSize: 22, fontWeight: 800, letterSpacing: '-0.5px', color: '#0f172a', marginTop: 16 }}>Welcome back</h1>
-          <p style={{ color: '#64748b', fontSize: 14, marginTop: 4 }}>
-            Sign in to access your sales workspace
-          </p>
-        </div>
-
-        <div className="card" style={{ padding: '28px 24px' }}>
-          {/* Demo hint */}
-          <div style={{
-            background: '#eff6ff', border: '1px solid #bfdbfe',
-            borderRadius: 8, padding: '10px 14px', marginBottom: 20, fontSize: 13,
-            color: '#1e40af',
-          }}>
-            🚀 <strong style={{ color: '#1e3a8a' }}>Demo pre-filled</strong> — just click Sign in!
+    <div className="auth-split-wrapper">
+      {/* Left Column: Form */}
+      <div className="auth-form-column">
+        <div className="auth-form-box">
+          {/* Logo & Welcome */}
+          <div style={{ textAlign: 'center', marginBottom: 28, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <BrandLogo size="xl" />
+            <h1 style={{ fontSize: 24, fontWeight: 800, letterSpacing: '-0.5px', color: '#0f172a', marginTop: 16 }}>Welcome back</h1>
+            <p style={{ color: '#64748b', fontSize: 14, marginTop: 4 }}>
+              Sign in to access your sales workspace
+            </p>
           </div>
 
-          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            <div className="form-group">
-              <label className="form-label">Email</label>
-              <div className="search-input">
-                <Mail size={15} className="icon" />
-                <input
-                  className="form-input"
-                  style={{ paddingLeft: 36 }}
-                  type="email" value={email}
-                  onChange={e => setEmail(e.target.value)}
-                  placeholder="you@example.com"
-                  required
-                />
-              </div>
+          <div className="card" style={{ padding: '28px 24px' }}>
+            {/* Demo hint */}
+            <div style={{
+              background: '#eff6ff', border: '1px solid #bfdbfe',
+              borderRadius: 8, padding: '10px 14px', marginBottom: 20, fontSize: 13,
+              color: '#1e40af',
+            }}>
+              🚀 <strong style={{ color: '#1e3a8a' }}>Demo pre-filled</strong> — just click Sign in!
             </div>
 
-            <div className="form-group">
-              <label className="form-label">Password</label>
-              <div style={{ position: 'relative' }}>
-                <Lock size={15} style={{ position: 'absolute', left: 11, top: '50%', transform: 'translateY(-50%)', color: '#94a3b8' }} />
-                <input
-                  className="form-input"
-                  style={{ paddingLeft: 36, paddingRight: 40 }}
-                  type={showPw ? 'text' : 'password'}
-                  value={password}
-                  onChange={e => setPassword(e.target.value)}
-                  placeholder="••••••••"
-                  required
-                />
-                <button type="button" onClick={() => setShowPw(!showPw)} style={{
-                  position: 'absolute', right: 10, top: '50%', transform: 'translateY(-50%)',
-                  background: 'none', border: 'none', cursor: 'pointer', color: '#94a3b8', padding: 2,
-                }}>
-                  {showPw ? <EyeOff size={15} /> : <Eye size={15} />}
-                </button>
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              <div className="form-group">
+                <label className="form-label">Email</label>
+                <div className="search-input">
+                  <Mail size={15} className="icon" />
+                  <input
+                    className="form-input"
+                    style={{ paddingLeft: 36 }}
+                    type="email" value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    placeholder="you@example.com"
+                    required
+                  />
+                </div>
               </div>
-            </div>
 
-            {error && <div style={{ color: '#dc2626', fontSize: 13, background: '#fef2f2', border: '1px solid #fecaca', padding: '8px 12px', borderRadius: 6 }}>{error}</div>}
+              <div className="form-group">
+                <label className="form-label">Password</label>
+                <div style={{ position: 'relative' }}>
+                  <Lock size={15} style={{ position: 'absolute', left: 11, top: '50%', transform: 'translateY(-50%)', color: '#94a3b8' }} />
+                  <input
+                    className="form-input"
+                    style={{ paddingLeft: 36, paddingRight: 40 }}
+                    type={showPw ? 'text' : 'password'}
+                    value={password}
+                    onChange={e => setPassword(e.target.value)}
+                    placeholder="••••••••"
+                    required
+                  />
+                  <button type="button" onClick={() => setShowPw(!showPw)} style={{
+                    position: 'absolute', right: 10, top: '50%', transform: 'translateY(-50%)',
+                    background: 'none', border: 'none', cursor: 'pointer', color: '#94a3b8', padding: 2,
+                  }}>
+                    {showPw ? <EyeOff size={15} /> : <Eye size={15} />}
+                  </button>
+                </div>
+              </div>
 
-            <button type="submit" className="btn btn-primary btn-lg w-full" disabled={loading} style={{ marginTop: 4 }}>
-              {loading ? <div className="spinner" /> : 'Sign in'}
-            </button>
-          </form>
+              {error && <div style={{ color: '#dc2626', fontSize: 13, background: '#fef2f2', border: '1px solid #fecaca', padding: '8px 12px', borderRadius: 6 }}>{error}</div>}
+
+              <button type="submit" className="btn btn-primary btn-lg w-full" disabled={loading} style={{ marginTop: 4 }}>
+                {loading ? <div className="spinner" /> : 'Sign in'}
+              </button>
+            </form>
+          </div>
+
+          <p style={{ textAlign: 'center', fontSize: 14, color: '#64748b', marginTop: 16 }}>
+            Don't have an account?{' '}
+            <Link to="/register" style={{ color: '#2563eb', fontWeight: 600, textDecoration: 'none' }}>
+              Create one
+            </Link>
+          </p>
+
+          {/* Creator Footer */}
+          <div style={{ textAlign: 'center', marginTop: 24, fontSize: 12, color: '#94a3b8', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6 }}>
+            <span>Developed with precision by</span>
+            <span style={{
+              fontWeight: 700,
+              color: '#475569',
+              background: '#e2e8f0',
+              padding: '2px 8px',
+              borderRadius: 12,
+            }}>
+              Armin
+            </span>
+          </div>
         </div>
+      </div>
 
-        <p style={{ textAlign: 'center', fontSize: 14, color: '#64748b', marginTop: 16 }}>
-          Don't have an account?{' '}
-          <Link to="/register" style={{ color: '#2563eb', fontWeight: 600, textDecoration: 'none' }}>
-            Create one
-          </Link>
-        </p>
+      {/* Right Column: 2D Minimalist Hero Showcase */}
+      <div className="auth-hero-column">
+        <div className="auth-hero-inner">
+          <div className="auth-hero-badge">
+            <TrendingUp size={14} />
+            <span>High-Velocity Sales Pipeline</span>
+          </div>
 
-        {/* Creator Footer */}
-        <div style={{ textAlign: 'center', marginTop: 24, fontSize: 12, color: '#94a3b8', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6 }}>
-          <span>Developed with precision by</span>
-          <span style={{
-            fontWeight: 700,
-            color: '#475569',
-            background: '#e2e8f0',
-            padding: '2px 8px',
-            borderRadius: 12,
-          }}>
-            Armin
-          </span>
+          <h2 className="auth-hero-title">
+            Manage relationships. Close deals with confidence.
+          </h2>
+
+          <p className="auth-hero-desc">
+            An intuitive, distraction-free workspace designed to track lead stages, conversion funnels, and customer touchpoints in real time.
+          </p>
+
+          <div className="auth-illustration-container">
+            <img
+              src={loginIllustration}
+              alt="Nexora CRM 2D Sales Analytics Illustration"
+              className="auth-illustration-img"
+            />
+          </div>
+
+          <div className="auth-feature-pills">
+            <div className="auth-feature-pill">
+              <CheckCircle2 size={15} color="#2563eb" />
+              <span>Interactive Kanban</span>
+            </div>
+            <div className="auth-feature-pill">
+              <Zap size={15} color="#2563eb" />
+              <span>Pipeline Funnels</span>
+            </div>
+            <div className="auth-feature-pill">
+              <ShieldCheck size={15} color="#2563eb" />
+              <span>Contact Intelligence</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
